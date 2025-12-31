@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Gentleman Gift ID — Katalog Kado Pria Premium</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        
+         :root {
+            --black: #0b0b0b;
+            --dark: #111;
+            --gold: #c6a86d;
+            --gray: #9ca3af;
+            --white: #fff;
+        }
+        
+        * {
+            box-sizing: border-box
+        }
+        
+        body {
+            margin: 0;
+            font-family: Inter, sans-serif;
+            background: var(--black);
+            color: var(--white);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+        
+        h1,
+        h2,
+        h3 {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .btn {
+            padding: 14px 22px;
+            border-radius: 30px;
+            border: none;
+            font-weight: 700;
+            cursor: pointer;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(90deg, var(--gold), #e6d2a2);
+            color: #111;
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 1px solid #333;
+            color: var(--gray);
+        }
+        /* HERO */
+        
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        
+        .hero h1 {
+            font-size: 42px;
+            line-height: 1.1;
+        }
+        
+        .hero p {
+            color: var(--gray);
+            margin: 16px 0 24px;
+        }
+        
+        .hero img {
+            border-radius: 16px;
+            width: 100%;
+        }
+        /* TRUST */
+        
+        .trust {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin-top: 48px;
+        }
+        
+        .trust div {
+            background: #121212;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            font-weight: 600;
+        }
+        /* CATALOG */
+        
+        .catalog {
+            margin-top: 64px;
+        }
+        
+        .catalog-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 16px;
+            box-sizing: border-box;
+        }
+        
+        .product {
+            background: #121212;
+            border-radius: 14px;
+            padding: 14px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .product img {
+            height: 220px;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+        
+        .badge {
+            background: rgba(198, 168, 109, 0.15);
+            color: var(--gold);
+            padding: 6px 10px;
+            border-radius: 8px;
+            font-size: 12px;
+            font-weight: 700;
+            width: max-content;
+            margin-top: 10px;
+        }
+        
+        .product h3 {
+            font-size: 16px;
+            margin: 10px 0 6px;
+        }
+        
+        .price {
+            font-weight: 800;
+            color: var(--gold);
+        }
+        
+        .old {
+            text-decoration: line-through;
+            font-size: 13px;
+            color: #f70000;
+        }
+        
+        .product button {
+            margin-top: auto;
+        }
+        /* TESTIMONI */
+        
+        .testimoni {
+            margin-top: 64px;
+        }
+        
+        .testi-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        
+        .testi {
+            background: #121212;
+            padding: 20px;
+            border-radius: 14px;
+        }
+        
+        .testi img {
+            width: 50px;
+            border-radius: 10%;
+        }
+        /* CTA */
+        
+        .cta {
+            margin-top: 64px;
+            background: linear-gradient(90deg, #161616, #0d0d0d);
+            padding: 48px;
+            border-radius: 20px;
+            text-align: center;
+        }
+        
+        footer {
+            margin-top: 64px;
+            padding: 32px;
+            border-top: 1px solid #222;
+            color: var(--gray);
+            text-align: center;
+        }
+        
+        @media(max-width:900px) {
+            .hero {
+                grid-template-columns: 1fr
+            }
+            .catalog-grid {
+                grid-template-columns: repeat(2, 1fr)
+            }
+            .trust {
+                grid-template-columns: repeat(2, 1fr)
+            }
+            .testi-grid {
+                grid-template-columns: 1fr
+            }
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                overflow-x: hidden;
+            }
+            .container {
+                padding: 24px 16px;
+            }
+            /* HERO */
+            .hero {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 24px;
+            }
+            .hero h1 {
+                font-size: 28px;
+                line-height: 1.3;
+            }
+            .hero p {
+                font-size: 15px;
+            }
+            /* TRUST BADGE */
+            .trust {
+                grid-template-columns: 1fr 1fr;
+                gap: 12px;
+            }
+            /* PRODUK */
+            .catalog-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+            .product {
+                max-width: 100%;
+            }
+            .product img {
+                aspect-ratio: 1 / 1;
+            }
+            /* BUTTON */
+            button,
+            .btn {
+                width: 100%;
+                padding: 14px;
+                font-size: 16px;
+            }
+            /* TESTIMONI */
+            .testi-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<script>
+    function buyWA(nama, harga) {
+        const phone = "6281384871430"; // GANTI NOMOR WA KAMU
+
+        const pesan = `Halo Admin The Gentleman Gift 👋
+Saya tertarik dengan produk berikut:
+
+ Produk: ${nama}
+ Harga : ${harga}
+
+
+Apakah masih tersedia?`;
+
+        const url = "https://wa.me/" + phone + "?text=" + encodeURIComponent(pesan);
+        window.open(url, "_blank");
+    }
+</script>
+
+</body>
+
+
+<body>
+
+    <div class="container">
+
+        <!-- HERO -->
+        <section class="hero">
+            <div>
+                <h1>Kado Pria Premium<br>yang Berkelas & Berkesan</h1>
+                <p>Pilihan kado ulang tahun pria usia 25–45 tahun. Elegan, praktis, dan siap kirim hari ini.</p>
+                <a href="#koleksi" class="btn btn-primary">
+  Lihat Koleksi
+</a>
+                <a href="https://wa.me/6281384871430?text=Halo%20Admin%20The%20Gentleman%20Gift%20👋%0ASaya%20bingung%20memilih%20kado.%20Boleh%20dibantu%20rekomendasinya?" target="_blank" class="btn btn-outline">
+  Bingung Pilih Kado?
+</a>
+
+            </div>
+            <img src="bg2.gif">
+        </section>
+
+        <!-- TRUST -->
+        <section class="trust">
+            <div>🎁 Premium Quality</div>
+            <div>⚡ Fast Shipping</div>
+            <div>🎀 Gift Wrapping</div>
+            <div>✍️ Custom Card</div>
+        </section>
+
+        <!-- CATALOG -->
+        <section class="catalog" id="koleksi">
+            <h2>Pilihan Kado Terfavorit</h2>
+
+            <div class="catalog-grid">
+
+                <div class="product">
+                    <img src="tas,dompet,jamtangan.webp">
+                    <div class="badge">BEST SELLER</div>
+                    <h3>Cluth + Dompet + Jam + Box</h3>
+                    <div class="old">Rp250.000</div>
+                    <div class="price">Rp180.000</div>
+                    <button class="btn btn-primary" onclick="buyWA('Cluth + Dompet + Jam + Box','Rp180.000')">
+        Beli Sekarang
+      </button>
+                </div>
+
+                <div class="product">
+                    <img src="tasjamtangan.jpeg">
+                    <div class="badge">Exclusive</div>
+                    <h3>Cluth + Jam + Box</h3>
+                    <div class="old">Rp180.000</div>
+                    <div class="price">Rp150.000</div>
+                    <button class="btn btn-primary" onclick="buyWA('Cluth + Jam + Box','Rp150.000')">
+        Beli Sekarang
+      </button>
+                </div>
+
+                <div class="product">
+                    <img src="tasdompet.jpeg">
+                    <div class="badge">Exclusive</div>
+                    <h3>Cluth + Dompet + Box</h3>
+                    <div class="old">Rp180.000</div>
+                    <div class="price">Rp150.000</div>
+                    <button class="btn btn-primary" onclick="buyWA('Cluth + Dompet + Box','Rp150.000')">
+        Beli Sekarang
+      </button>
+                </div>
+
+                <div class="product">
+                    <img src="tasaja.jpeg">
+                    <div class="badge">Hemat</div>
+                    <h3>Cluth + Box</h3>
+                    <div class="old">Rp150.000</div>
+                    <div class="price">Rp120.000</div>
+                    <button class="btn btn-primary" onclick="buyWA('Cluth + Box','Rp120.000')">
+        Beli Sekarang
+      </button>
+                </div>
+
+                <div class="product">
+                    <img src="jamtangan.webp">
+                    <div class="badge">Hadiah Satuan</div>
+                    <h3>Jam Tangan Pria + Box</h3>
+                    <div class="old">Rp100.000</div>
+                    <div class="price">Rp80.000</div>
+                    <button class="btn btn-primary" onclick="buyWA('Jam Tangan Pria + Box','Rp80.000')">
+        Beli Sekarang
+      </button>
+                </div>
+
+                <div class="product">
+                    <img src="dompetgesper.webp">
+                    <div class="badge">Set Kombinasi Dompet Dan Sabuk Kulit Sapi Pria</div>
+                    <h3>Dompet dan Sabuk Kulit + Box</h3>
+                    <div class="old">Rp200.000</div>
+                    <div class="price">Rp180.000</div>
+                    <button class="btn btn-primary" onclick="buyWA('Dompet dan Sabuk Kulit + Box','Rp180.000')">
+        Beli Sekarang
+      </button>
+                </div>
+            </div>
+
+    </div>
+    </section>
+
+
+    <!-- TESTIMONI -->
+    <section class="testimoni">
+        <h2>Apa Kata Mereka?</h2>
+        <div class="testi-grid">
+            <div class="testi">
+                <p>Nisa - Bandung </p>
+                <img src="1.webp">
+                <p>⭐️⭐️⭐️⭐️⭐️</p>
+                <p>"Packing super rapi & mewah. Hadiahnya berasa mahal!"</p>
+            </div>
+            <div class="testi">
+                <p>Rani - Bogor </p>
+                <img src="2.webp">
+                <p>⭐️⭐️⭐️⭐️⭐️</p>
+                <p>"Sangat membantu buat yang bingung cari kado pria."</p>
+            </div>
+            <div class="testi">
+                <p>Ayu - Jakarta </p>
+                <img src="3.webp">
+                <p>⭐️⭐️⭐️⭐️⭐️</p>
+                <p>"Langsung checkout, gak ribet sama sekali."</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+        <h2>Siap Memberi Kado yang Berkesan?</h2>
+        <p class="sub">Pesan sekarang — kirim hari ini</p>
+        <a href="https://wa.me/6281384871430?text=Halo%20Admin%20The%20Gentleman%20Gift%20👋%0ASaya%20ingin%20checkout%20sekarang.%0AMohon%20dibantu%20proses%20pemesanan." target="_blank" class="btn btn-primary">
+  Checkout Sekarang
+</a>
+
+    </section>
+
+    </div>
+
+    <footer>
+        © 2025 The Gentleman Gift ID — Premium Gifts for Men
+    </footer>
+
+</body>
+
+</html>
